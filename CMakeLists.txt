@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(jellyfin-desktop LANGUAGES C CXX)
+project(BesFlix-desktop LANGUAGES C CXX)
 
 # Enable Objective-C++ on macOS
 if(APPLE)
@@ -495,7 +495,7 @@ else()
     )
 endif()
 
-add_executable(jellyfin-desktop
+add_executable(BesFlix-desktop
     ${COMMON_SOURCES}
     ${PLATFORM_SOURCES}
 )
@@ -673,7 +673,7 @@ if(WIN32)
     endif()
 elseif(APPLE)
     # macOS app bundle installation
-    set(APP_NAME "Jellyfin Desktop.app")
+    set(APP_NAME "BesFlix Desktop.app")
     set(BUNDLE_CONTENTS "${CMAKE_INSTALL_PREFIX}/${APP_NAME}/Contents")
 
     # Install executable
@@ -754,9 +754,9 @@ else()
 endif()
 
 # CPack for creating distribution packages
-set(CPACK_PACKAGE_NAME "jellyfin-desktop")
-set(CPACK_PACKAGE_VENDOR "Jellyfin")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Jellyfin Desktop Client")
+set(CPACK_PACKAGE_NAME "BesFlix-desktop")
+set(CPACK_PACKAGE_VENDOR "BesFlix")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "BesFlix")
 file(READ "${CMAKE_SOURCE_DIR}/VERSION" CPACK_PACKAGE_VERSION)
 string(STRIP "${CPACK_PACKAGE_VERSION}" CPACK_PACKAGE_VERSION)
 if(WIN32)
